@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Tasks</h1>
+
+<h2>Tareas por completar</h2>
+<ul>
+    {% for paciente in lista %}
+        <li>
+            <h3>{{paciente.nombre1}} {{paciente.nombre2}} {{paciente.apellido1}} {{paciente.apellido2}}</h3>
+            <ul>
+                <li>{{paciente.genero_id}}</li>
+                <li>{{paciente.tipo_documento_id}}: {{paciente.numero_documento}}</li>
+                <li>Departamento: {{paciente.departamento_id}}</li>
+                <li>Municipio: {{paciente.municipio_id}}</li>
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+
+
+
+{% endblock %}
